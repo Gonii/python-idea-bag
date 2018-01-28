@@ -13,7 +13,6 @@ The first time through, visit every door and  toggle  the door  (if the door is 
 The second time, only visit every 2nd door   (door #2, #4, #6, ...),   and toggle it.
 The third time, visit every 3rd door   (door #3, #6, #9, ...), etc,   until you only visit the 100th door
 Task
-
-Answer the question:   what state are the doors in after the last pass?   Which are open, which are closed?
+.What state are the doors in after the last pass?   Which are open, which are closed?
 
 
