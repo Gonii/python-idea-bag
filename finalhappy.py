@@ -7,9 +7,8 @@ def square(n):
 
 
 def prepare_number(n):
-    x = map(int, list(str(n)))
-    print sum(map(square, x))
-    return sum(map(square, x))
+    print sum(map(square, map(int, list(str(n)))))
+    return sum(map(square, map(int, list(str(n)))))
 
 
 def happy_number(inp):
