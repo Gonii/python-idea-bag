@@ -33,4 +33,4 @@ def happy_number(inp):
         print "Happy Number"
 
 
-happy_number(83)
+happy_number(inp)
