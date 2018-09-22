@@ -14,9 +14,6 @@ cylinder[random.randint(0, 8)] = 1
 def game():
     value = 0
     difficulty = int(raw_input(">"))
-    if difficulty != 1 or difficulty != 2 or difficulty != 3:
-        print "Choose 1,2 or 3"
-        game()
     count = 0
     passcount = 1
     for i in cylinder:
