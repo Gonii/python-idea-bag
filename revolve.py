@@ -18,7 +18,7 @@ def game():
     passcount = 1
     for i in cylinder:
         print "ROUND {}".format(int(count) + 1)
-        a = raw_input("Shoot ?\n>")
+        a = raw_input("Shoot ?\nY/N>")
         if a == "yes" or a == "yes".upper() or a == 'y' or a == 'y'.upper():
             if cylinder[count] == 1:
                 print "Dead."
