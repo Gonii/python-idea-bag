@@ -21,5 +21,7 @@ for i in inp:
                 a = index - key
             empty.append(alphabet[a])
 
-
-print ("Encrypted Text: " + ''.join(empty))
+if encrypt:
+	print ("Encrypted Text: " + ''.join(empty))
+else:
+	print ("Decrypted Text: " + ''.join(empty))
