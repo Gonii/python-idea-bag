@@ -1,4 +1,5 @@
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+import string
+alphabet = list(string.ascii_lowercase)
 ende = raw_input("(1)Encrypt or (2)Decrypt ?\n>")
 if ende == "1" or ende == "encrypt" or ende == "Encrypt":
     encrypt = True
@@ -7,21 +8,27 @@ else:
 inp = raw_input("Type text:\n>")
 empty = []
 key = 13
-try:
-    key = int(raw_input("Enter shift key(default 13):\n>"))
-except:
-    pass
+key = int(raw_input("Enter shift key(default 13):\n>"))
 for i in inp:
     for g in alphabet:
         if i == g:
             index = alphabet.index(g)
             if encrypt:
-                a = index + key
+                if index + key >= 26:
+                    total = index + key
+                    count = 1 + total / 26
+                    empty.append(alphabet[total - 26 * count])
+                else:
+                    a = index + key
+                    empty.append(alphabet[a])
             else:
-                a = index - key
-            empty.append(alphabet[a])
+                if index + key >= 26:
+                    total = index - key
+                    count = 1 + total / 26
+                    empty.append(alphabet[total - 26 * count])
+                else:
+                    a = index - key
+                    empty.append(alphabet[a])
 
-if encrypt:
-	print ("Encrypted Text: " + ''.join(empty))
-else:
-	print ("Decrypted Text: " + ''.join(empty))
+
+print ("Encrypted Text: " + ''.join(empty))
